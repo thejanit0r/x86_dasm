@@ -18,15 +18,14 @@ make all
 # Usage example
 
 ```c
+x86_dasm_context_t x86_dctx = {0};
+
 uint8_t code[] = {
     0xeb, 0xfe
 };
 
-x86_dasm_context_t x86_dctx = {
-    .dmode = X86_DMODE_64BIT
-};
-
 x86_set_buffer(&x86_dctx, code);
+x86_set_dmode(&x86_dctx, X86_DMODE_64BIT);
 x86_set_ip(&x86_dctx, 0x7ffe0000);
 
 if(x86_dasm(&x86_dctx) == 0)
