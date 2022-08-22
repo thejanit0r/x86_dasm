@@ -65,6 +65,26 @@ if(x86_dasm(&x86_dctx) == 0)
 0053 |                 FF D7  | call rdi
 ```
 
+# Helper macros for conditional expressions
+
+```c
+#include "x86_dasm_macros.h"
+
+// ...
+
+if(x86_dasm(&x86_dctx) == 0)
+{
+    if(X86M(&x86_dctx, ANY, REG(), REG())) 
+        printf("Matched an instruction with two register operands");
+    
+    if(X86M(&x86_dctx, MOV, REG(), MEXPR()))
+        printf("Matched: mov reg, mem");
+    
+    if(X86M(&x86_dctx, CALL, REG(EDI)))
+        printf("Matched: call edi");
+}
+```
+
 # License
 
 `x86_dasm` is licensed under the Apache License, Version 2.0

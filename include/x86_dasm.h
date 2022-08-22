@@ -1279,7 +1279,9 @@ enum
     X86_MN_SAVEPREVSSP,
     X86_MN_RSTORSSP,
     X86_MN_CLRSSBSY,
-    X86_MN_SETSSBSY
+    X86_MN_SETSSBSY,
+
+    X86_MN_ANY
 };
 
 /***************************************************************************/
