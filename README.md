@@ -75,13 +75,13 @@ if(x86_dasm(&x86_dctx) == 0)
 if(x86_dasm(&x86_dctx) == 0)
 {
     if(X86M(&x86_dctx, ANY, REG(), REG())) 
-        printf("Matched an instruction with two register operands\n");
+        printf("Matched an instruction with two register operands");
     
     if(X86M(&x86_dctx, MOV, REG(), MEXPR()))
-        printf("Matched: mov reg, mem\n");
+        printf("Matched: mov reg, mem");
     
     if(X86M(&x86_dctx, CALL, REG(EDI)))
-        printf("Matched: call edi\n");
+        printf("Matched: call edi");
 }
 ```
 
