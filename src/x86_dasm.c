@@ -1488,7 +1488,7 @@ decode_sib_1:
             }
 
             if( op->mexpr.base == X86_REG_EBP || 
-                op->mexpr.base == X86_REG_R13L ||
+                op->mexpr.base == X86_REG_R13D ||
                 op->mexpr.base == X86_REG_RBP || 
                 op->mexpr.base == X86_REG_R13 )
             {
